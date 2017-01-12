@@ -1,0 +1,14 @@
+<h1>Hype Starts Here</h1>
+<h3>Movies, Music, and occasionally TV and Sports.</h3>
+<ul>
+  {{#each model as |post|}}
+  <div>
+    {{post-tile post=post destroyRental="destroyRental"}}
+  </div>
+  {{/each}}
+</ul>
+
+{{new-post savePost2="savePost3"}}
+
+{{#link-to 'contact'}}Contact{{/link-to}}
+{{#link-to 'about'}}About{{/link-to}}

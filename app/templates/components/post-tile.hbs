@@ -1,0 +1,8 @@
+<h4>{{post.title}}</h4>
+<p>{{post.body}}</p>
+{{#if isImageShowing}}
+<p><img src={{post.image}} alt={{post.title}} {{action 'imageHide'}}></p>
+{{else}}
+  <button {{action 'imageShow'}}>Show image</button>
+{{/if}}
+<button {{action 'delete' post}}>Delete Post</button>
