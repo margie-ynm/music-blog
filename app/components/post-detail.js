@@ -6,6 +6,9 @@ export default Ember.Component.extend({
       if (confirm('Are you sure want to delete this post?')) {
         this.sendAction('destroyPost', post);
       }
+    },
+      destroyReview(review) {
+      this.sendAction('destroyReview', review);
     }
   }
 });

@@ -6,9 +6,14 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(post) {
-    post.destroyRecord();
-    this.transitionTo('index');
-  },
+      var review_deletions = post.get('reviews').map(function(review) {
+        return review.destroyRecord();
+      });
+      Ember.RSVP.all(review_deletions).then(function() {
+        return post.destroyRecord();
+      });
+      this.transitionTo('index');
+    },
     update(post, params) {
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
@@ -26,6 +31,10 @@ export default Ember.Route.extend({
         return post.save();
       });
       this.transitionTo('post', post);
+    },
+    destroyReview(review) {
+      review.destroyRecord();
+      this.transitionTo('index');
     }
   }
 });

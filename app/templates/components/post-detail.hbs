@@ -6,7 +6,7 @@
 <h2> Reviews </h2>
 <ul>
   {{#each post.reviews as |review|}}
-    {{review-tile review=review}}
+    {{review-tile review=review destroyReview="destroyReview"}}
   {{/each}}
 </ul>
 <button {{action 'delete' post}}>Delete</button>
