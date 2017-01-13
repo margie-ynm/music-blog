@@ -17,5 +17,14 @@
   "image": "https://2.bp.blogspot.com/-AmL0lb5qQ5U/WGVHXLPq_vI/AAAAAAAAEu8/f6wugfwRxpIPQfE0AMivr_ghyAzLajHkwCLcB/s1600/Blink-182_-_Calfornia.jpg",
   "date": "Friday, January 6, 2017",
   "author": "By Collin Sherwood Elwin"
+  }],
+  "reviews": [{
+    "author": "Andrea",
+    "rating": 4,
+    "content": "Did not fall down."
+  }, {
+    "author": "Alex",
+    "rating": 9,
+    "content": "Nice view of the volcano!"
   }]
 }

@@ -1,14 +1,24 @@
 <h1>Hype Starts Here</h1>
 <h3>Movies, Music, and occasionally TV and Sports.</h3>
 <ul>
-  {{#each model as |post|}}
+  {{#each model.posts as |post|}}
   <div>
-    {{post-tile post=post destroyRental="destroyRental"}}
+    {{post-tile post=post}}
   </div>
   {{/each}}
 </ul>
 
 {{new-post savePost2="savePost3"}}
+
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+  {{/each}}
+</ul>
+
+{{new-review saveReview="saveReview"}}
+
+<hr>
 
 {{#link-to 'contact'}}Contact{{/link-to}}
 {{#link-to 'about'}}About{{/link-to}}

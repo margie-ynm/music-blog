@@ -1,0 +1,7 @@
+<h1>{{post.title}}</h1>
+<h3>{{post.date}}</h3>
+<p>{{post.author}}</p>
+<p>{{post.body}}</p>
+<p><img src={{post.image}} alt={{post.title}}></p>
+
+<button {{action 'delete' post}}>Delete</button>
